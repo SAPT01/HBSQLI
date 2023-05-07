@@ -115,10 +115,10 @@ def onfile_v():
             console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
 
             if res_time >=float(25) and res_time <=float(25):
-               console.print("[🐞bold][cyan]Status: [/][red]Vulnerable[/][/]")
+               console.print("🐞 [bold][cyan]Status: [/][red]Vulnerable[/][/]")
                print()
             else:
-               console.print ("🐞[bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
+               console.print ("🐞 [bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
                print()
          except ClientConnectorError as e:
             print(str(e))
@@ -203,10 +203,10 @@ def onurl_v():
          console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
 
          if res_time >=float(25) and res_time <=float(25):
-            console.print("[🐞bold][cyan]Status: [/][red]Vulnerable[/][/]")
+            console.print("[🐞 [bold][cyan]Status: [/][red]Vulnerable[/][/]")
             print()
          else:
-            console.print ("🐞[bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
+            console.print ("🐞 [bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
             print()        
       except ClientConnectorError as e:
          print(str(e))
