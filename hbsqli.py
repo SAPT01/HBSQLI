@@ -73,30 +73,10 @@ def onfile():
                console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
                console.print("🐞 [bold][cyan]Status: [/][red]Vulnerable[/][/]")
                print()
-         except ClientConnectorError as e:
-            print(str(e))
-         except ClientOSError:
-            pass
-         except ServerDisconnectedError:
-            pass
-         except UnicodeDecodeError:
-            pass
-         except TooManyRedirects:
-            pass
-         except ServerTimeoutError:
-            pass
-         except ServerConnectionError:
-            pass
-         except AssertionError:
-            pass
-         except TimeoutError:
-            pass
-         except ConnectionRefusedError:
-            pass
-         except SSLError:
-            pass
-         except URLError:
-            pass           
+         except (UnicodeDecodeError, AssertionError, TimeoutError, ConnectionRefusedError, SSLError, URLError, ConnectionResetError, httpx.RequestError) as e:
+            print(f"The request was not successful due to: {e}")
+            print()
+            pass       
          
 #For File as an Input-Verbose
 def onfile_v():
@@ -121,30 +101,10 @@ def onfile_v():
             else:
                console.print ("🐞[bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
                print()
-         except ClientConnectorError as e:
-            print(str(e))
-         except ClientOSError:
-            pass
-         except ServerDisconnectedError:
-            pass
-         except UnicodeDecodeError:
-            pass
-         except TooManyRedirects:
-            pass
-         except ServerTimeoutError:
-            pass
-         except ServerConnectionError:
-            pass
-         except AssertionError:
-            pass
-         except TimeoutError:
-            pass
-         except ConnectionRefusedError:
-            pass
-         except SSLError:
-            pass
-         except URLError:
-            pass
+         except (UnicodeDecodeError, AssertionError, TimeoutError, ConnectionRefusedError, SSLError, URLError, ConnectionResetError, httpx.RequestError) as e:
+            print(f"The request was not successful due to: {e}")
+            print()
+            pass 
 
 #For URL as an Input
 def onurl():
@@ -163,30 +123,10 @@ def onurl():
             console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
             console.print("🐞 [bold][cyan]Status: [/][red]Vulnerable[/][/]")
             print()       
-      except ClientConnectorError as e:
-         print(str(e))
-      except ClientOSError:
-         pass
-      except ServerDisconnectedError:
-         pass
-      except UnicodeDecodeError:
-         pass
-      except TooManyRedirects:
-         pass
-      except ServerTimeoutError:
-         pass
-      except ServerConnectionError:
-         pass
-      except AssertionError:
-         pass
-      except TimeoutError:
-         pass
-      except ConnectionRefusedError:
-         pass
-      except SSLError:
-         pass
-      except URLError:
-         pass
+      except (UnicodeDecodeError, AssertionError, TimeoutError, ConnectionRefusedError, SSLError, URLError, ConnectionResetError, httpx.RequestError) as e:
+         print(f"The request was not successful due to: {e}")
+         print()
+         pass 
         
 #For URL as an Input-Verbose
 def onurl_v():
@@ -209,30 +149,10 @@ def onurl_v():
          else:
             console.print ("🐞[bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
             print()        
-      except ClientConnectorError as e:
-         print(str(e))
-      except ClientOSError:
-         pass
-      except ServerDisconnectedError:
-         pass
-      except UnicodeDecodeError:
-         pass
-      except TooManyRedirects:
-         pass
-      except ServerTimeoutError:
-         pass
-      except ServerConnectionError:
-         pass
-      except AssertionError:
-         pass
-      except TimeoutError:
-         pass
-      except ConnectionRefusedError:
-         pass
-      except SSLError:
-         pass
-      except URLError:
-         pass        
+      except (UnicodeDecodeError, AssertionError, TimeoutError, ConnectionRefusedError, SSLError, URLError, ConnectionResetError, httpx.RequestError) as e:
+         print(f"The request was not successful due to: {e}")
+         print()
+         pass         
 
 #Banner
 console.print('''[royal_blue1]                
@@ -261,3 +181,4 @@ elif args.list != None:
       onfile()
 else:
    print("Error: One out of the two flag -u or -l is required")       
+
