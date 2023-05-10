@@ -2,4 +2,3 @@ User-Agent
 Referer
 X-Forwarded-For
 X-Host
-User-Agent
