@@ -64,7 +64,8 @@ def onfile():
       for header in headers_dict:
          cust_header = {header.split(": ")[0]: header.split(": ")[1]}
          try:
-            response = httpx.get(url, headers=cust_header, timeout=60)
+            with httpx.Client(timeout=60) as client:
+               response = client.get(url, headers=cust_header, follow_redirects=True)
             res_time=response.elapsed.total_seconds()
 
             if res_time >=float(25) and res_time <=float(25):
@@ -90,7 +91,8 @@ def onfile_v():
          console.print("🌐 [bold][cyan]Testing for URL: [/][/]", url)
          console.print ("💉 [bold][cyan]Testing for Header: [/][/]", repr(header))
          try:
-            response = httpx.get(url, headers=cust_header, timeout=60)
+            with httpx.Client(timeout=60) as client:
+               response = client.get(url, headers=cust_header, follow_redirects=True)
             console.print("🔢 [bold][cyan]Status code: [/][/]", response.status_code)
             res_time=response.elapsed.total_seconds()
             console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
@@ -114,7 +116,8 @@ def onurl():
    for header in headers_dict:
       cust_header = {header.split(": ")[0]: header.split(": ")[1]}
       try:
-         response = httpx.get(url, headers=cust_header, timeout=60)
+         with httpx.Client(timeout=60) as client:
+            response = client.get(url, headers=cust_header, follow_redirects=True)
          res_time=response.elapsed.total_seconds()
 
          if res_time >=float(25) and res_time <=float(25):
@@ -138,7 +141,8 @@ def onurl_v():
       console.print("🌐 [bold][cyan]Testing for URL: [/][/]", url)
       console.print ("💉 [bold][cyan]Testing for Header: [/][/]", repr(header))
       try:
-         response = httpx.get(url, headers=cust_header, timeout=60)
+         with httpx.Client(timeout=60) as client:
+            response = client.get(url, headers=cust_header, follow_redirects=True)
          console.print("🔢 [bold][cyan]Status code: [/][/]", response.status_code)
          res_time=response.elapsed.total_seconds()
          console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
