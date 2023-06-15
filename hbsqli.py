@@ -68,7 +68,7 @@ def onfile():
                response = client.get(url, headers=cust_header, follow_redirects=True)
             res_time=response.elapsed.total_seconds()
 
-            if res_time >=float(25) and res_time <=float(25):
+            if res_time >=float(25) and res_time <=float(50):
                console.print("🌐 [bold][cyan]Testing for URL: [/][/]", url)
                console.print ("💉 [bold][cyan]Testing for Header: [/][/]", repr(header))
                console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
@@ -97,7 +97,7 @@ def onfile_v():
             res_time=response.elapsed.total_seconds()
             console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
 
-            if res_time >=float(25) and res_time <=float(25):
+            if res_time >=float(25) and res_time <=float(50):
                console.print("[🐞bold][cyan]Status: [/][red]Vulnerable[/][/]")
                print()
             else:
@@ -120,7 +120,7 @@ def onurl():
             response = client.get(url, headers=cust_header, follow_redirects=True)
          res_time=response.elapsed.total_seconds()
 
-         if res_time >=float(25) and res_time <=float(25):
+         if res_time >=float(25) and res_time <=float(50):
             console.print("🌐 [bold][cyan]Testing for URL: [/][/]", url)
             console.print ("💉 [bold][cyan]Testing for Header: [/][/]", repr(header))
             console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
@@ -147,8 +147,8 @@ def onurl_v():
          res_time=response.elapsed.total_seconds()
          console.print("⏱️ [bold][cyan]Response Time: [/][/]", repr(res_time))
 
-         if res_time >=float(25) and res_time <=float(25):
-            console.print("[🐞bold][cyan]Status: [/][red]Vulnerable[/][/]")
+         if res_time >=float(25) and res_time <=float(50):
+            console.print("🐞 [bold][cyan]Status: [/][red]Vulnerable[/][/]")
             print()
          else:
             console.print ("🐞[bold][cyan]Status: [/][green]Not Vulnerable[/][/]")
@@ -185,4 +185,3 @@ elif args.list != None:
       onfile()
 else:
    print("Error: One out of the two flag -u or -l is required")       
-
